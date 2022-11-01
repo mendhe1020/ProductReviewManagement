@@ -37,6 +37,7 @@
             DisplayProductReviewRecords(list);
             Console.WriteLine("-------------");
             ProductreviewManagement.RetrieveTop3Reating(list);
+            ProductreviewManagement.FetchBasedOnRatingAndProductId(list);
         }
 
         public static void DisplayProductReviewRecords(List<ProductReview>list)
