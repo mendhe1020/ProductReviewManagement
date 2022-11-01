@@ -32,5 +32,16 @@ namespace ProductReviewManagement
                 Console.WriteLine("ProductId:{0} Count:{1}", item.productId,item.count);
             }
         }
+        //uc5
+        public static void FetchProductIdAndReview(List<ProductReview> list)
+        {
+            Console.WriteLine("\nFrequency productId And Review");
+            var res = (list.Select(r => new { productId = r.ProductId, review=r.Review })).ToList();
+            foreach(var item in res)
+            {
+                Console.WriteLine("ProductId:{0} Count:{1}", item.productId, item.review);
+            }
+
+        }
     }
 }
