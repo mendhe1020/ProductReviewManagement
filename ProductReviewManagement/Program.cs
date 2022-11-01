@@ -38,6 +38,7 @@
             Console.WriteLine("-------------");
             ProductreviewManagement.RetrieveTop3Reating(list);
             ProductreviewManagement.FetchBasedOnRatingAndProductId(list);
+            ProductreviewManagement.FrequencyOfEachproductId(list);
         }
 
         public static void DisplayProductReviewRecords(List<ProductReview>list)

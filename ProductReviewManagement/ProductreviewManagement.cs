@@ -22,5 +22,15 @@ namespace ProductReviewManagement
             List<ProductReview> basedOnProductId=list.Where(p=> p.Rating>3 && (p.ProductId ==1 || p.ProductId ==4 || p.ProductId == 9)).ToList();
             Program.DisplayProductReviewRecords(basedOnProductId);
         }
+        //uc4
+        public static void FrequencyOfEachproductId(List<ProductReview> list)
+        {
+            Console.WriteLine("\nFrequency of each productId");
+           var res=(list.GroupBy(p => p.ProductId).Select(r => new { productId = r.Key, count= r.Count() })).ToList();
+            foreach (var item in res)
+            {
+                Console.WriteLine("ProductId:{0} Count:{1}", item.productId,item.count);
+            }
+        }
     }
 }
